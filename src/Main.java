@@ -23,15 +23,21 @@ public class Main {
         Subtask subtask3 = new Subtask("html", "изучение frontend",
                 Status.NEW, epicId1);
         int subtaskId3 = taskManager.createSubtask(subtask3);
+        Subtask subtask4 = new Subtask("javascript", "изучение frontend",
+                Status.NEW, epicId1);
+        int subtaskId4 = taskManager.createSubtask(subtask4);
         taskManager.getEpicById(subtaskId1);
         taskManager.getEpicById(subtaskId2);
+        taskManager.getEpicById(subtaskId3);
         taskManager.getSubtaskByEpicId(epicId1);
-        subtask1.setStatus(Status.IN_PROGRESS);
-        subtask2.setStatus(Status.IN_PROGRESS);
-        subtask3.setStatus(Status.DONE);
+        subtask1.setStatus(Status.DONE);
+        subtask2.setStatus(Status.DONE);
+        subtask3.setStatus(Status.IN_PROGRESS);
+        subtask4.setStatus(Status.DONE);
         taskManager.updateSubtask(subtask1);
         taskManager.updateSubtask(subtask2);
         taskManager.updateSubtask(subtask3);
+        taskManager.updateSubtask(subtask4);
         taskManager.updateEpic(epic1);
         System.out.println(epic1);
         taskManager.deleteSubtaskById(subtaskId2);
